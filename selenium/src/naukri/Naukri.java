@@ -16,11 +16,10 @@ public class Naukri {
 		wd.findElement(By.id("usernameField")).sendKeys("vasanth436045@gmail.com");
 		wd.findElement(By.id("passwordField")).sendKeys("Krypton@naukri");
 		wd.findElement(By.xpath("//button[text()='Login']")).click();
-		wd.findElement(By.className("nI-gNb-drawer__bars")).click();
-		wd.findElement(By.className("nI-gNb-drawer__bars")).click();
-		wd.findElement(By.className("nI-gNb-drawer__bars")).click();
+		
 	}
 
 	
 }
+
 
