@@ -1,0 +1,22 @@
+package actions;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class ToLearnRightClickOnElement {
+	public static void main(String[] args) {
+		WebDriver wd=new EdgeDriver();
+		wd.manage().window().maximize();
+		wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		wd.get("https://demo.guru99.com/test/simple_context_menu.html");
+		WebElement element = wd.findElement(By.xpath("//span[text()='right click me']"));
+		Actions a=new Actions(wd);
+		a.contextClick(element).perform();
+		wd.findElement(By.xpath("//span[text()='Copy']")).click();
+	}
+}
